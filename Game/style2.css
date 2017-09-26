@@ -1,12 +1,22 @@
-body{
+
+
+html, body{/*styling for the body-background image only*/
+	/*background image added to the body - the image is the Rugrats lving room with white bottom for charater space*/
 	background-image: url('https://i.pinimg.com/originals/ff/29/85/ff298568e2e096f81772128b40b4009c.png');
-	background-repeat: no-repeat;
-	min-width: 100%;
-	min-height: auto;
-	position: fixed;
-	background-size: cover;
+	background-repeat: no-repeat; /*background image not allowed to repeat*/
+	height: 100%; /*background height set to 100%*/
+	width: 100%;
+	background-size: cover; /*background size to fill the full screen*/
+	margin: 0;
+}
+.logo{
+	height: 300px;
+	width: 500px;
 }
 
-.logo{
-	
+.cells{
+	background-color: blue;
+	height: 200px;
+	width: 200px;
+	margin: 0 auto;
 }

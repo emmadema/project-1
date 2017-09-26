@@ -1,12 +1,35 @@
 <!DOCTYPE html>
 <head>
 	<title>Rugrats Matching Game</title>
+
+	<!--Link CSS style sheet for one player game-->
 	<link rel="stylesheet" type="text/css" href="style2.css">
 </head>
 <body>
-	<div class = 'logo'><h1><img src="https://upload.wikimedia.org/wikipedia/de/7/7a/Logo_Rugrats.svg" alt="Logo_Rugrats"></h1></div>
 
+	<!--Create H1 div for the Rugrats logo with a class of logo assigned to the image-->
+	<div><h1><img src="https://upload.wikimedia.org/wikipedia/de/7/7a/Logo_Rugrats.svg" class = 'logo' alt="Logo_Rugrats"></h1></div>
+
+	<!--Create Table for the playing cards with a class of gam board-->
+	<table id="gameBoard" class="table">
+		<tbody>
+			<tr> <!--create new table row 1 to house playing cards-->
+				<th id="topLeft" class="cells"></th> <!--Top Left cell-->
+				<th id="topMiddle" class="cells"></th> <!--Top Middle cell-->
+				<th id="topRight" class="cells"></th> <!--Cottom Middle Cell-->
+			</tr>
+			<tr> <!--create new table row 2 to house palying cards-->
+				<th id="bottomLeft" class="cells"></th> <!--Bottom Left cell-->
+				<th id="bottomMiddle" class="cells"></th> <!--Bottom Middle Cell-->
+				<th id="bottmRight" class="cells"></th> <!--Bottom Right Cell-->
+			</tr>
+		</tbody>
+	</table>
+
+	<!--Link jquery CDN-->
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+
+	<!--Link JS file-->
 	<script type="text/javascript" src="my2.js"></script>
 	
 </body>
