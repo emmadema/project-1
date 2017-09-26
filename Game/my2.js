@@ -10,7 +10,7 @@ $(document).ready(function(){
 //add image for front of card same for each cells
 
  	$('.cells').click(function(){
- 			for();
+ 			//for();
  			$('.cardBack').hide();
  			$('.cardFront').show();
  	});
