@@ -9,14 +9,18 @@ html, body{/*styling for the body-background image only*/
 	background-size: cover; /*background size to fill the full screen*/
 	margin: 0;
 }
+
 .logo{
 	height: 300px;
 	width: 500px;
 }
 
+#gameBoard{
+	margin: auto;
+	border-spacing: 40px;
+}
+
 .cells{
-	background-color: blue;
 	height: 200px;
 	width: 200px;
-	margin: 0 auto;
 }
