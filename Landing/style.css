@@ -1,3 +1,26 @@
-body{
-	background: blue;
+
+
+body{ /*styling for the body-background image only*/
+	/*background image added to the body - the image is the Rugrats lving room with white bottom for charater space*/
+	background-image: url('http://img3.wikia.nocookie.net/__cb13/rugrats/images/5/50/Wiki-background');
+	background-repeat: no-repeat; /*background image not allowed to repeat*/
+	height: 150%; /*background height set to 100%*/
+	width: 100%;
+	background-size: cover; /*background size to fill the full screen*/
+}
+
+.tommy{
+	/*resized imaged to appear at the bottom of the screen in the white space*/
+	height: 300px;
+	width: 400px;
+	display: inline;
+	margin: 0 auto;
+}
+
+.philLil{
+	/*resized image fit at the bottom of the scrren in the white space*/
+	height: 300px;
+	width: 500px;
+	margin: 0 auto;
+	display: inline;
 }
