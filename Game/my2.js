@@ -10,7 +10,9 @@ $(document).ready(function(){
 //add image for front of card same for each cells
 
  	$('.cells').click(function(){
- 			$('img').toggle();
+ 			for();
+ 			$('.cardBack').hide();
+ 			$('.cardFront').show();
  	});
 
  	
@@ -18,10 +20,10 @@ $(document).ready(function(){
 
  	//refresh button
 
- 	$('.refresh').click(function(){
- 		var randomImg = Math.floor(Math.random()*100);
- 		console.log(random);
- 	});
+ 	//$('.refresh').click(function(){
+ 		//var randomImg = Math.floor(Math.random()*100);
+ 	//	console.log(random);
+ 	//});
 
 
 
