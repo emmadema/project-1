@@ -10,42 +10,91 @@ body{ /*styling for the body-background image only*/
 
 .tommy{
 	/*resized imaged*/
-	height: 300px;
-	width: 300px;
+	height: 150px;
+	width: 150px;
+	display: inline-block;
+	vertical-align: text-bottom;
+	float: left;
+	clear: right;
+	margin: 0 auto;
 }
 
 .philLil{
 	/*resized image*/
-	height: 200px;
-	width: 300px;
+	height: 150px;
+	width: 200px;
+	display: inline-block;
+	vertical-align: text-bottom;
+	float: left;
+	clear: right;
+	margin: 0 auto;
 }
 
 .chuckie{
 	/*resized image*/
-	height: 400px;
-	width: 200px;
+	height: 200px;
+	width: 100px;
+	display: inline-block;
+	vertical-align: text-bottom;
+	float: left;
+	clear: right;
+	margin: 0 auto;
 }
 
 .angelica{
 	/*resized image*/
-	height: 400px;
-	width: 300px;
+	height: 200px;
+	width: 150px;
+	display: inline-block;
+	vertical-align: text-bottom;
+	float: right;
+	clear: left;
+	margin: 0 auto;
 }
 
 .suize{
 	/*resized image*/
-	height: 400px;
-	width: 300px;
+	height: 200px;
+	width: 150px;
+	display: inline-block;
+	vertical-align: text-bottom;
+	float:right;
+	clear: left;
+	margin: 0 auto;
 }
 
 .dil{
 	/*resized image*/
-	height: 300px;
-	width: 300px;
+	height: 150px;
+	width: 150px;
+	display: inline-block;
+	vertical-align: text-bottom;
+	float: right;
+	clear: left;
+	margin: 0 auto;
 }
 
-.kimi{
-	/*resized image*/
-	height: 400px;
-	width: 300px;
+/*.kimi{
+	height: 200px;
+	width: 150px;
+	display: inline-block;
+	vertical-align: text-bottom;
+	float: right;
+	clear: left;
+	margin: 0 auto;
+}*/
+
+.onePlayer{
+margin: auto;
+
+}
+
+.twoPlayer{
+ margin: auto;
+ 
+}
+
+.vsComp{
+margin: auto;
+
 }

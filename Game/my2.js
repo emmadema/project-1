@@ -17,12 +17,11 @@ $(document).ready(function(){
 //when player gets all cards matched annouce a winner
 //use two boards on one screen split with sperate scores then comapre the seprate scores
 
-	
 
-		var points = 0;
-		var score = $();
+		//var points = 0;
+		//var score = $();
 
-		var topLeft = $('#topLeft');
+		/*var topLeft = $('#topLeft');
 		var topMiddle = $('#topMiddle');
 		var topRight = $('#topRight');
 		var bottomLeft = $('#bottomLeft');
@@ -31,13 +30,29 @@ $(document).ready(function(){
 		
 		var cards = [topLeft, topMiddle, topRight, bottomLeft, bottomMiddle, bottomRight];
 
-		//when a card is clicked set the attribute of one of those 
+		//when a card is clicked set the attribute of one of those */
 
 
 	//flip the cards when a cell is clicked
-	$('.cells').click(function(){//when a cell is clicked run this function
+	$('.cells').click(function(){ //when a cell is clicked run this function
 		$(this).find('.cardFront').show();//find only the card front of the element that is clicked 
 		$(this).find('.cardBack').hide();//find only the card back of the elemnt that is clicked and hide it
+		
+			var flipped = ($(this).attr('class'));
+			if($(this).length === 2) {
+			console.log('cards flipped');
+			var firstCard = flipped.first();
+			var secondCard = flipped.last();
+			if (firstCard.attr('class') === secondCard.attr('class')) {
+				points ++;
+				console.log("You found a match!");
+				firstCard.remove();
+				secondCard.remove();
+			}
+
+		}
+
+
 	});
 
 	
@@ -50,19 +65,7 @@ $(document).ready(function(){
 	//give each card a class and write out random sequences
 	//use a function to sort an array of cards randomly into each cell
 
-	var flipped = ".cardFront";
-
-		if(flipped.length === 2) {
-			var firstCard = flipped.first();
-			var secondCard = flipped.last();
-		if (firstCard.id() === secondCard.id() ){
-				points ++;
-				score.text("You found a match!");
-				firstCard.remove();
-				secondCard.remove();
-
-			}
-		}
+	
 
 	//reset button 
 	$('.refresh').click(function(){//when the refresh button is clicked run this function

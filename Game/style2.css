@@ -3,7 +3,7 @@
 html, body{/*styling for the body-background image only*/
 	/*background image added to the body - the image is the Rugrats lving room with white bottom for charater space*/
 	background-image: url('https://i.pinimg.com/originals/ff/29/85/ff298568e2e096f81772128b40b4009c.png');
-	background-repeat: no-repeat; /*background image not allowed to repeat*/
+	background-repeat: repeat; /*background image not allowed to repeat*/
 	height: 100%; /*background height set to 100%*/
 	width: 100%;
 	background-size: cover; /*background size to fill the full screen*/
@@ -23,4 +23,21 @@ html, body{/*styling for the body-background image only*/
 .cells{
 	height: 200px;
 	width: 200px;
+}
+
+button{
+	display: inline-block;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	margin-left: 600px;
+	margin-right: 20px;
+	border-radius: 20px;
+	padding: 30px;
+	font-size: 32px;
+	background-color: #ffff66;
+	box-shadow: 5px 5px 5px #ffffcc;
+	border: none;
+	font-family: 'Bangers', cursive;
+	color: #9370DB;
+	position: relative;
 }
