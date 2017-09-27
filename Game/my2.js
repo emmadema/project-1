@@ -3,113 +3,11 @@
 $(document).ready(function(){
 	console.log('query ready');
 
-//showing images when clicked
-//on click hide image on front of card and show image on back of card
-//unbind click so each card can only be clicked once
-//append image to the DOM for back or card
-//add image for front of card same for each cells
-
-
-	var topLeft = ($('#topLeft'));
-	var topMiddle = ($('#topMiddle'));
-	var topRight = ($('#topRight'));
-	var bottomLeft = ($('#bottomLeft'));
-	var bottomMiddle = ($('#bottomMiddle'));
-	var bottomRight = ($('#bottomRight'));
-
-	var clickCells = $('.cells').click();
-
-	switch ('clickCells')
-	{
-		case topLeft:
-			$('.cardBack').hide();
- 			$('.cardFront').show();
- 			console.log('card 1 clicked');
- 			break;
- 		case topMiddle:
- 			$('.cardBack').hide();
- 			$('.cardFront').show();
- 			console.log('card 2 clicked');
- 			break;
- 		case topRight:
- 			$('.cardBack').hide();
- 			$('.cardFront').show();
- 			console.log('card 3 clicked');
- 			break;
- 		case bottomLeft:
- 			$('.cardBack').hide();
- 			$('.cardFront').show();
- 			console.log('card 4 clicked');
- 			break;
- 		case bottomMiddle:
- 			$('.cardBack').hide();
- 			$('.cardFront').show();
- 			console.log('card 5 clicked');
- 			break;
- 		case bottomRight:
- 			$('.cardBack').hide();
- 			$('.cardFront').show();
- 			console.log('card 6 clicked');
- 			break;
-	}
-
- 	/*$('.cells').click(function(){
- 		if (topLeft) {
- 			$('.cardBack').hide();
- 			$('.cardFront').show();
- 			console.log('card 1 clicked');
- 			break;
- 		} else if (topMiddle) { 
- 			$('.cardBack').hide();
- 			$('.cardFront').show();
- 			console.log('card 2 clicked');
- 			break;
- 		} else if (topRight) {
- 			$('.cardBack').hide();
- 			$('.cardFront').show();
- 			console.log('card 3 clicked');
- 			break;
- 		} else if (bottomLeft) {
- 			$('.cardBack').hide();
- 			$('.cardFront').show();
- 			console.log('card 4 clicked');
- 			break;
- 		} else if (bottomMiddle) {
- 			$('.cardBack').hide();
- 			$('.cardFront').show();
- 			console.log('card 5 clicked');
- 			break;
- 		} else if (bottomRight) {
- 			$('.cardBack').hide();
- 			$('.cardFront').show();
- 			console.log('card 6 clicked');
- 			break;
- 		} else {
- 			return ("No more matches");
- 		}
-
- 	});*/
-
- 	
-
-
- 	//refresh button
-
- 	$('.refresh').click(function(){
- 		$('.cardFront').hide();
- 		$('.cardBack').show();
- 		//var randomImg = Math.floor(Math.random()*100);
- 	});
- 	//	console.log(random);
- 	//});
-
-
-
-});
-
-//assigning cards randomly at the start of the game
-//give each card a class and write out random sequences
-//use a function to sort an array of cards randomly into each cell
+//What I need to do
+//showing images when clicked - Done
+//on click hide image on front of card and show image on back of card - Done
+//unbind click so each card can only be clicked once - Done
+//add image for front of card same for each - Done
 
 //showing images when clicked
 //on click hide image on front of card and show image on back of card
@@ -118,3 +16,67 @@ $(document).ready(function(){
 //keep score and store the score for each game - build the score as the player plays more games 
 //when player gets all cards matched annouce a winner
 //use two boards on one screen split with sperate scores then comapre the seprate scores
+
+	
+
+		var points = 0;
+		var score = $();
+
+		var topLeft = $('#topLeft');
+		var topMiddle = $('#topMiddle');
+		var topRight = $('#topRight');
+		var bottomLeft = $('#bottomLeft');
+		var bottomMiddle = $('#bottomMiddle');
+		var bottomRight = $('#bottomRight');
+		
+		var cards = [topLeft, topMiddle, topRight, bottomLeft, bottomMiddle, bottomRight];
+
+		//when a card is clicked set the attribute of one of those 
+
+
+	//flip the cards when a cell is clicked
+	$('.cells').click(function(){//when a cell is clicked run this function
+		$(this).find('.cardFront').show();//find only the card front of the element that is clicked 
+		$(this).find('.cardBack').hide();//find only the card back of the elemnt that is clicked and hide it
+	});
+
+	
+	//if number of cards =2 see if thier ids match
+	// if they do match give a point
+	//if two cards are slected even if they dont match flip them back over
+	//if cards match keep them fliped over
+	//the game is over when all cards are matched
+	//assigning cards randomly at the start of the game
+	//give each card a class and write out random sequences
+	//use a function to sort an array of cards randomly into each cell
+
+	var flipped = ".cardFront";
+
+		if(flipped.length === 2) {
+			var firstCard = flipped.first();
+			var secondCard = flipped.last();
+		if (firstCard.id() === secondCard.id() ){
+				points ++;
+				score.text("You found a match!");
+				firstCard.remove();
+				secondCard.remove();
+
+			}
+		}
+
+	//reset button 
+	$('.refresh').click(function(){//when the refresh button is clicked run this function
+ 		$('.cardFront').hide();//for every card hide the card front with the character
+ 		$('.cardBack').show();//for every card show the card back with the Rugrats logo
+ 	});
+ 	
+});
+
+	
+
+ 
+
+
+
+
+
