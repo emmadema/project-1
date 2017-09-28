@@ -19,40 +19,44 @@ $(document).ready(function(){
 
 
 	var points = 0;
-	var score = $();
+	var score = 0;
 
 	var clicks = 0;
-	var classNames = [];
+	var classNames = []; //calls names array feeds in the class names for the click function and then moves them out
 
+	//function seeCard (){
 		//var flipped = $('')
+	//}
 
 	//flip the cards when a cell is clicked
 	$('.cells').click(function(){ //when a cell is clicked run this function
 		$(this).find('.cardFront').show();//find only the card front of the element that is clicked 
 		$(this).find('.cardBack').hide();//find only the card back of the elemnt that is clicked and hide it		
-		classNames.push($(this).find('.cardFront'));
-		console.log(classNames);
-		if (clicks === 0) {
-			clicks++;
+		classNames.push($(this).find('.cardFront'));//push the class name of card front into the array classNames
+		console.log(classNames);//checking to make sure the class names is working
+		if (clicks === 0) { //when the click varable is 0 execute code
+			clicks++;//add one to the click count
 			//dont compare
 
-		} else if (clicks === 1) {
+		} else if (clicks === 1) { //if clicks = 1 the execute code
 			clicks=0;
+			// move the clicks back to 0 and move on to compare the cards
 			//compare!
-			if (classNames[0].attr('class') === classNames[1].attr('class')){
-				//dont allow another click 
-				$(this).unbind("click");
-				setTimeout(alert, 500, "match");
-			} else {
-				$(this).find('.cardBack').show();
-				$(this).find('.cardFront').hide();
-								//
-				// show();
-
-				classNames[0].hide();
-				classNames[0].parent().find('.cardBack').show();
-
+			if (classNames[0].attr('class') === classNames[1].attr('class')){//if the classNames match up in the array for both 1 and 2 execute code
+				$(this).unbind("click");//dont allow another click 
+				setTimeout(alert, 500, "You got a match!"); //send alert that you have a match, but dont run it until the card is flipped over
+				points++;
+				if (points === 3){
+					setTimeout(alert, 1000, "You Win!");
+				}
 			}
+			} else { //if there is no match then show the card back and hide the card front
+				clicks =0;
+				$(this).find('.cardBack').show();//when I remove this the card clicked on secong dissaperes
+				$(this).find('.cardFront').hide();//when I remove this the first card dissappersand the second card appers under the card Back
+				classNames[0].parent().find('.cardBack').show();//when I remove this the first card clicked disspears and the second card never flips
+				classNames[0].hide(); //when I remove this the first card show and then hide as soon as the second card is clicked withouh showing the second card
+			
 		classNames =[];
 		}
 		
@@ -80,10 +84,10 @@ $(document).ready(function(){
 	//use a function to sort an array of cards randomly into each cell
 
 	//reset button 
-	$('.refresh').click(function(){//when the refresh button is clicked run this function
- 		$('.cardFront').hide();//for every card hide the card front with the character
- 		$('.cardBack').show();//for every card show the card back with the Rugrats logo
- 	});
+	//$('.refresh').click(function(){//when the refresh button is clicked run this function
+ 	//	$('.cardFront').hide();//for every card hide the card front with the character
+ 	//	$('.cardBack').show();//for every card show the card back with the Rugrats logo
+ 	//});
  	
 });
 
