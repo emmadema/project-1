@@ -36,24 +36,35 @@ $(document).ready(function(){
 	//flip the cards when a cell is clicked
 	$('.cells').click(function(){ //when a cell is clicked run this function
 		$(this).find('.cardFront').show();//find only the card front of the element that is clicked 
-		$(this).find('.cardBack').hide();//find only the card back of the elemnt that is clicked and hide it
-		
-			var flipped = ($(this).attr('class'));
-			if($(this).length === 2) {
-			console.log('cards flipped');
-			var firstCard = flipped.first();
-			var secondCard = flipped.last();
-			if (firstCard.attr('class') === secondCard.attr('class')) {
-				points ++;
-				console.log("You found a match!");
-				firstCard.remove();
-				secondCard.remove();
-			}
-
-		}
+		$(this).find('.cardBack').hide();//find only the card back of the elemnt that is clicked and hide it	
+		var flipped1 = $('.reptar').length; 
+		var flipped2 = $('.tommy').length;
+		var flipped3 = $('.angelica').length;//create a variable for what is cliked (this) and pull its class
+		var flipped = [flipped1, flipped2, flipped3];	
+			if (flipped === 2) { //if the # of flipped cards = 2 then move on
+				console.log('cards flipped'); 	
+			} 
 
 
 	});
+
+		//function matchingCards (){
+		
+
+		//matchingCards();
+			
+
+			//var firstCard = flipped.first(); //makes a varibale for the first flipped card
+			//var secondCard = flipped.last(); //makes a varibale for the second flipped card
+			//if(firstCard.attr('class') === secondCard.attr('class')) { //if the first cards class = second cards class
+				//points ++;//add 1 point to the totoal points
+				//console.log("You found a match!"); //alert the user that they have a match
+				//firstCard.remove();//remove so the function will run again for the next match
+				//secondCard.remove(); //remove so the function will run again for the next match
+			//}
+
+
+
 
 	
 	//if number of cards =2 see if thier ids match
