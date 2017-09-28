@@ -1,29 +1,17 @@
-
 //initiates jQuery in the document
 $(document).ready(function(){
-	console.log('query ready');
-
-//What I need to do
-//showing images when clicked - Done
-//on click hide image on front of card and show image on back of card - Done
-//unbind click so each card can only be clicked once - Done
-//add image for front of card same for each - Done
-
-//showing images when clicked
-//on click hide image on front of card and show image on back of card
-//unbind click so each card can only be clicked once
-
-//keep score and store the score for each game - build the score as the player plays more games 
-//when player gets all cards matched annouce a winner
-//use two boards on one screen split with sperate scores then comapre the seprate scores
-
+console.log('query ready');
 
 	var points = 0;
 	var score = 0;
 
+	
+
 	var clicks = 0;
 	var classNames = []; //calls names array feeds in the class names for the click function and then moves them out
 
+	var player1 = player1;
+	var player2 = player2;
 	//function seeCard (){
 		//var flipped = $('')
 	//}
@@ -41,13 +29,16 @@ $(document).ready(function(){
 			clicks=0; // move the clicks back to 0 and move on to compare the cards
 			//compare
 			if (classNames[0].attr('class') === classNames[1].attr('class')){//if the classNames match up in the array for both 1 and 2 execute code
-				$(this).unbind('click');//dont allow another click 
+				//$(this).unbind('click');//dont allow another click 
 				//classNames = []; //clear the array after a match
 				setTimeout(alert, 500, "You got a match!"); //send alert that you have a match, but dont run it until the card is flipped over
-				points++;
+				points++;//ad one point each time
+				$(".points").append(points); //display the points
 				console.log(points);
-				if (points === 3){
-					setTimeout(alert, 1000, "You Win!");
+				if (points === 3){//if points are three then execute code
+					setTimeout(alert, 1000, "You Win!"); //
+					score++;
+					$(".score").append(score);
 				}
 		} else { //if there is no match then show the card back and hide the card front
 			$(this).find('.cardBack').show();//when I remove this the card clicked on secong dissaperes
@@ -60,10 +51,12 @@ $(document).ready(function(){
 			}
 
 		classNames = [];
-
+		
 		}
 	
 	});
+
+
 			
 		
 	//if number of cards =2 see if thier ids match
@@ -79,15 +72,11 @@ $(document).ready(function(){
 	$('.refresh').click(function(){//when the refresh button is clicked run this function
  		$('.cardFront').hide();//for every card hide the card front with the character
  		$('.cardBack').show();//for every card show the card back with the Rugrats logo
+ 		classNames=[]; //sets class names back to 0
+ 		points=0; //sets points back to 0
+ 		clicks=0; //sets clicks back to 0
+  		//$('.cells').attr('class').bind('click');
+
  	});
  	
 });
-
-	
-
- 
-
-
-
-
-
