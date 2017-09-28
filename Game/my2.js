@@ -24,11 +24,6 @@ $(document).ready(function(){
 	var clicks = 0;
 	var classNames = [];
 
-	var flipped1 = $('.reptar').length; 
-	var flipped2 = $('.tommy').length;
-	var flipped3 = $('.angelica').length;//create a variable for what is cliked (this) and pull its class
-	var flipped = [flipped1, flipped2, flipped3];
-
 		//var flipped = $('')
 
 	//flip the cards when a cell is clicked
