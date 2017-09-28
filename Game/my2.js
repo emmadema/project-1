@@ -37,42 +37,34 @@ $(document).ready(function(){
 		if (clicks === 0) { //when the click varable is 0 execute code
 			clicks++;//add one to the click count
 			//dont compare
-
 		} else if (clicks === 1) { //if clicks = 1 the execute code
-			clicks=0;
-			// move the clicks back to 0 and move on to compare the cards
-			//compare!
+			clicks=0; // move the clicks back to 0 and move on to compare the cards
+			//compare
 			if (classNames[0].attr('class') === classNames[1].attr('class')){//if the classNames match up in the array for both 1 and 2 execute code
-				$(this).unbind("click");//dont allow another click 
+				$(this).unbind('click');//dont allow another click 
+				//classNames = []; //clear the array after a match
 				setTimeout(alert, 500, "You got a match!"); //send alert that you have a match, but dont run it until the card is flipped over
 				points++;
+				console.log(points);
 				if (points === 3){
 					setTimeout(alert, 1000, "You Win!");
 				}
+		} else { //if there is no match then show the card back and hide the card front
+			$(this).find('.cardBack').show();//when I remove this the card clicked on secong dissaperes
+			$(this).find('.cardFront').hide();
+			classNames[0].hide();//when I remove this the first card dissappersand the second card appers under the card Back
+			classNames[0].parent().find('.cardBack').show();//when I remove this the first card clicked disspears and the second card never flips
+			 //when I remove this the first card show and then hide as soon as the second card is clicked withouh showing the second card
+			 //clear the array after two cards are drawn that dont match
+			//clicks=0;	
 			}
-			} else { //if there is no match then show the card back and hide the card front
-				clicks =0;
-				$(this).find('.cardBack').show();//when I remove this the card clicked on secong dissaperes
-				$(this).find('.cardFront').hide();//when I remove this the first card dissappersand the second card appers under the card Back
-				classNames[0].parent().find('.cardBack').show();//when I remove this the first card clicked disspears and the second card never flips
-				classNames[0].hide(); //when I remove this the first card show and then hide as soon as the second card is clicked withouh showing the second card
-			
-		classNames =[];
-		}
-		
 
-			// if (flipped.length === 2) { //if the # of flipped cards = 2 then move on
-			// 	console.log('cards flipped');	
-			// } 
+		classNames = [];
+
+		}
+	
 	});
-			/*var firstCard = flipped.first(); //makes a varibale for the first flipped card
-			var secondCard = flipped.last(); //makes a varibale for the second flipped card
-			if(firstCard.attr('class') === secondCard.attr('class')) { //if the first cards class = second cards class
-				points ++;//add 1 point to the totoal points
-				console.log("You found a match!"); //alert the user that they have a match
-				firstCard.remove();//remove so the function will run again for the next match
-				secondCard.remove(); //remove so the function will run again for the next match
-			}*/
+			
 		
 	//if number of cards =2 see if thier ids match
 	// if they do match give a point
@@ -84,10 +76,10 @@ $(document).ready(function(){
 	//use a function to sort an array of cards randomly into each cell
 
 	//reset button 
-	//$('.refresh').click(function(){//when the refresh button is clicked run this function
- 	//	$('.cardFront').hide();//for every card hide the card front with the character
- 	//	$('.cardBack').show();//for every card show the card back with the Rugrats logo
- 	//});
+	$('.refresh').click(function(){//when the refresh button is clicked run this function
+ 		$('.cardFront').hide();//for every card hide the card front with the character
+ 		$('.cardBack').show();//for every card show the card back with the Rugrats logo
+ 	});
  	
 });
 
