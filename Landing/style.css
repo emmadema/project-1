@@ -1,5 +1,4 @@
-
-body{ /*styling for the body-background image only*/
+body { /*styling for the body-background image only*/
 	/*background image added to the body - the image is the Rugrats lving room with white bottom for charater space*/
 	background-image: url('https://i.pinimg.com/736x/c7/7f/83/c77f8372936519fa81e281cbd76931d5--rugrats-s-nostalgia.jpg');
 	background-repeat: no-repeat; /*background image not allowed to repeat*/
@@ -8,15 +7,15 @@ body{ /*styling for the body-background image only*/
 	background-size: cover; /*background size to fill the full screen*/
 }
 
-img{ /*style for all page images*/
+img { /*style for all page images*/
 	height: 300px; /*sets image height to 300px*/
 	width: 600px; /*sets image width to 600px*/
 	margin: auto; /*centers element within container*/
 	float: left;/*moves image to the left*/
 }
 
-.onePlayer{/*styles the one player button*/
-	margin: auto;/*centers element within container*/
+.onePlayer {/*styles the one player button*/
+	margin: 200px 20px 20px 20px;/*set the outer margin*/
 	padding: 15px 40px 15px 40px; /*sets the internal padding*/
 	font-size: 30px;/*sets the font size*/
 	border-radius: 40px; /*creates buttons rounded edges*/
@@ -29,8 +28,8 @@ img{ /*style for all page images*/
 	position: relative; /*sets the postion relative to its normal postion*/
 }
 
-.twoPlayer{/*styles the two player button*/
-	margin: auto;/*centers element within container*/
+.twoPlayer {/*styles the two player button*/
+	margin: 200px 20px 20px 20px;/*sets the outer margin*/
 	padding: 15px 40px 15px 40px;/*sets the internal padding*/
 	font-size: 30px;/*sets the font size*/
 	border-radius: 40px;/*creates buttons rounded edges*/
@@ -39,16 +38,17 @@ img{ /*style for all page images*/
 	border: none;/*removes boarder*/
 	font-family: 'Bangers', cursive;/*sets the font family to bangers*/
 	color: #9370DB;/*sets the font color to purple*/
-	float: right;/*moves button to the right*/
+	float: left;/*moves button to the right*/
 	position: relative;/*sets the postion relative to its normal postion*/
 }
 
 footer {/*creates the footer for the page*/
-  position: absolute; /*moves when page is scrolled*/
-  right: 0; /*moves poation to bottom*/
-  bottom: 0;/*moves poation to bottom*/
-  left: 0;/*moves poation to bottom*/
-  padding: 10px;/*inner padding set to 10px*/
-  text-align: center; /*centers text*/
-  font-family: arial;/*changes font*/
+	position: absolute; /*moves when page is scrolled*/
+	right: 0; /*moves poation to bottom*/
+	bottom: 0;/*moves poation to bottom*/
+	left: 0;/*moves poation to bottom*/
+	padding: 10px;/*inner padding set to 10px*/
+	text-align: center; /*centers text*/
+	font-family: arial;/*changes font*/
+	color: white;/*changes the font color*/
 }
