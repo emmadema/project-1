@@ -112,6 +112,6 @@ $(document).ready(function(){
 		$(".pointsTwo div").append(points2);//appends the empty string
  		clicks=0; //sets clicks back to 0
   		playerTurn= "player_1";//set the player turn back to player one
-  		alert("Player One's turn");//alert player one that it is their turn
+  		setTimeout(alert, 500, "Player One's turn");//alert player one that it is their turn
  	});	
 });
