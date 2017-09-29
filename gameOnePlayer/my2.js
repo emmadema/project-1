@@ -50,8 +50,10 @@ $(document).ready(function(){
 	$('.refresh').click(function(){//when the refresh button is clicked run this function
  		$('.cardFront').hide();//for every card hide the card front with the character
  		$('.cardBack').show();//for every card show the card back with the Rugrats logo
+ 		$(".points div").text("");
+ 		points=0;//sets points back to 0
+		$(".points div").append(points);
  		classNames=[]; //sets class names back to 0
- 		points=0; //sets points back to 0
  		clicks=0; //sets clicks back to 0
  	});
 });

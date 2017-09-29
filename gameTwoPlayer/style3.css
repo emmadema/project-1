@@ -50,4 +50,6 @@ button{/*styles the rest button*/
 	font-family: 'Bangers', cursive;/*sets the font to bangers*/
 	color: #ffff66;/*sets the font color to yellow*/
 	font-size: 42px;/*sets the font size to 42px*/
+	margin: 0 auto;
+	
 }
