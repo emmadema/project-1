@@ -4,114 +4,51 @@ body{ /*styling for the body-background image only*/
 	background-image: url('https://i.pinimg.com/736x/c7/7f/83/c77f8372936519fa81e281cbd76931d5--rugrats-s-nostalgia.jpg');
 	background-repeat: no-repeat; /*background image not allowed to repeat*/
 	height: 100%; /*background height set to 100%*/
-	width: 100%;
+	width: 100%;/*background width set to 100%*/
 	background-size: cover; /*background size to fill the full screen*/
 }
 
-img{
-	height: 300px;
-	width: 600px;
-	margin: auto;
-	float: left;
+img{ /*style for all page images*/
+	height: 300px; /*sets image height to 300px*/
+	width: 600px; /*sets image width to 600px*/
+	margin: auto; /*centers element within container*/
+	float: left;/*moves image to the left*/
 }
 
-.onePlayer{
-	margin: auto;
-	padding: 15px 40px 15px 40px;
-	font-size: 30px;
-	border-radius: 40px;
-	background-color: #ffff66;
-	box-shadow: 5px 5px 5px #ffffcc;
-	border: none;
-	font-family: 'Bangers', cursive;
-	color: #9370DB;
-	float: left;
-	position: block;
-	margin: 20px;
+.onePlayer{/*styles the one player button*/
+	margin: auto;/*centers element within container*/
+	padding: 15px 40px 15px 40px; /*sets the internal padding*/
+	font-size: 30px;/*sets the font size*/
+	border-radius: 40px; /*creates buttons rounded edges*/
+	background-color: #ffff66;/*sets background color to yellow*/
+	box-shadow: 5px 5px 5px #ffffcc; /*sets box shadow to lighter yellow and defines the size of the shadow*/
+	border: none; /*removes boarder*/
+	font-family: 'Bangers', cursive;/*sets the font family to bangers*/
+	color: #9370DB;/*sets the font color to purple*/
+	float: left;/*fmoves button to the left*/
+	position: relative; /*sets the postion relative to its normal postion*/
 }
 
-.twoPlayer{
-	margin: auto;
-	padding: 15px 40px 15px 40px;
-	font-size: 30px;
-	border-radius: 40px;
-	background-color: #ffff66;
-	box-shadow: 5px 5px 5px #ffffcc;
-	border: none;
-	font-family: 'Bangers', cursive;
-	color: #9370DB;
-	position: relative;
-	float: right;
-	position: block;
-	margin: 20px;
+.twoPlayer{/*styles the two player button*/
+	margin: auto;/*centers element within container*/
+	padding: 15px 40px 15px 40px;/*sets the internal padding*/
+	font-size: 30px;/*sets the font size*/
+	border-radius: 40px;/*creates buttons rounded edges*/
+	background-color: #ffff66;/*sets background color to yellow*/
+	box-shadow: 5px 5px 5px #ffffcc;/*sets box shadow to lighter yellow and defines the size of the shadow*/
+	border: none;/*removes boarder*/
+	font-family: 'Bangers', cursive;/*sets the font family to bangers*/
+	color: #9370DB;/*sets the font color to purple*/
+	float: right;/*moves button to the right*/
+	position: relative;/*sets the postion relative to its normal postion*/
 }
 
-footer {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  padding: 10px;
-  text-align: center;
-  font-family: 'Bangers', cursive;
+footer {/*creates the footer for the page*/
+  position: absolute; /*moves when page is scrolled*/
+  right: 0; /*moves poation to bottom*/
+  bottom: 0;/*moves poation to bottom*/
+  left: 0;/*moves poation to bottom*/
+  padding: 10px;/*inner padding set to 10px*/
+  text-align: center; /*centers text*/
+  font-family: arial;/*changes font*/
 }
-
-/*.tommy{
-	height: 150px;
-	width: 150px;
-	display: inline-block;
-	vertical-align: text-bottom;
-	float: left;
-	clear: right;
-	margin: 0 auto;
-}
-
-.philLil{
-	height: 150px;
-	width: 200px;
-	display: inline-block;
-	vertical-align: text-bottom;
-	float: left;
-	clear: right;
-	margin: 0 auto;
-}
-
-.chuckie{
-	height: 200px;
-	width: 100px;
-	display: inline-block;
-	vertical-align: text-bottom;
-	float: left;
-	clear: right;
-	margin: 0 auto;
-}
-
-.angelica{
-	height: 200px;
-	width: 150px;
-	display: inline-block;
-	vertical-align: text-bottom;
-	float: right;
-	clear: left;
-	margin: 0 auto;
-}
-
-.suize{
-	height: 200px;
-	width: 150px;
-	display: inline-block;
-	vertical-align: text-bottom;
-	float:right;
-	clear: left;
-	margin: 0 auto;
-}
-
-.dil{
-	height: 150px;
-	width: 150px;
-	display: inline-block;
-	vertical-align: text-bottom;
-	float: right;
-	clear: left;
-	margin: 0 auto;
-}*/
