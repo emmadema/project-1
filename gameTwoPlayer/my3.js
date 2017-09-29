@@ -109,11 +109,11 @@ $(document).ready(function(){
  		$('.cardBack').show();//for every card show the card back with the Rugrats logo
  		classNames=[]; //sets class names back to 0
  		points1=0; //sets points back to 0
- 		points2=0;
  		$(".pointsOne div").text("");
-		$(".pointsOne div").append(points); 
- 		$(".scoreTwo div").text("");
-		$(".scoreTwo div").append(score); 		
+		$(".pointsOne div").append(points1); 
+		points2=0;
+		$(".pointsTwo div").text("");
+		$(".pointsTwo div").append(points2);
  		clicks=0; //sets clicks back to 0
   		playerTurn= "player_1";//set the player turn back to player one
   		alert("Player One's turn");//alert player one that it is their turn

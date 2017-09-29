@@ -1,79 +1,19 @@
 
 body{ /*styling for the body-background image only*/
 	/*background image added to the body - the image is the Rugrats lving room with white bottom for charater space*/
-	background-image: url('https://i.pinimg.com/736x/07/5e/1f/075e1fac62a0dd2367a0acd92241b752--rugrats-packaging.jpg');
+	background-image: url('https://i.pinimg.com/736x/c7/7f/83/c77f8372936519fa81e281cbd76931d5--rugrats-s-nostalgia.jpg');
 	background-repeat: no-repeat; /*background image not allowed to repeat*/
 	height: 100%; /*background height set to 100%*/
 	width: 100%;
 	background-size: cover; /*background size to fill the full screen*/
 }
 
-.tommy{
-	/*resized imaged*/
-	height: 150px;
-	width: 150px;
-	display: inline-block;
-	vertical-align: text-bottom;
+img{
+	height: 300px;
+	width: 600px;
+	margin: auto;
 	float: left;
-	clear: right;
-	margin: 0 auto;
 }
-
-.philLil{
-	/*resized image*/
-	height: 150px;
-	width: 200px;
-	display: inline-block;
-	vertical-align: text-bottom;
-	float: left;
-	clear: right;
-	margin: 0 auto;
-}
-
-.chuckie{
-	/*resized image*/
-	height: 200px;
-	width: 100px;
-	display: inline-block;
-	vertical-align: text-bottom;
-	float: left;
-	clear: right;
-	margin: 0 auto;
-}
-
-.angelica{
-	/*resized image*/
-	height: 200px;
-	width: 150px;
-	display: inline-block;
-	vertical-align: text-bottom;
-	float: right;
-	clear: left;
-	margin: 0 auto;
-}
-
-.suize{
-	/*resized image*/
-	height: 200px;
-	width: 150px;
-	display: inline-block;
-	vertical-align: text-bottom;
-	float:right;
-	clear: left;
-	margin: 0 auto;
-}
-
-.dil{
-	/*resized image*/
-	height: 150px;
-	width: 150px;
-	display: inline-block;
-	vertical-align: text-bottom;
-	float: right;
-	clear: left;
-	margin: 0 auto;
-}
-
 
 .onePlayer{
 	margin: auto;
@@ -85,7 +25,7 @@ body{ /*styling for the body-background image only*/
 	border: none;
 	font-family: 'Bangers', cursive;
 	color: #9370DB;
-	float: right;
+	float: left;
 	position: block;
 	margin: 20px;
 }
@@ -105,3 +45,73 @@ body{ /*styling for the body-background image only*/
 	position: block;
 	margin: 20px;
 }
+
+footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 10px;
+  text-align: center;
+  font-family: 'Bangers', cursive;
+}
+
+/*.tommy{
+	height: 150px;
+	width: 150px;
+	display: inline-block;
+	vertical-align: text-bottom;
+	float: left;
+	clear: right;
+	margin: 0 auto;
+}
+
+.philLil{
+	height: 150px;
+	width: 200px;
+	display: inline-block;
+	vertical-align: text-bottom;
+	float: left;
+	clear: right;
+	margin: 0 auto;
+}
+
+.chuckie{
+	height: 200px;
+	width: 100px;
+	display: inline-block;
+	vertical-align: text-bottom;
+	float: left;
+	clear: right;
+	margin: 0 auto;
+}
+
+.angelica{
+	height: 200px;
+	width: 150px;
+	display: inline-block;
+	vertical-align: text-bottom;
+	float: right;
+	clear: left;
+	margin: 0 auto;
+}
+
+.suize{
+	height: 200px;
+	width: 150px;
+	display: inline-block;
+	vertical-align: text-bottom;
+	float:right;
+	clear: left;
+	margin: 0 auto;
+}
+
+.dil{
+	height: 150px;
+	width: 150px;
+	display: inline-block;
+	vertical-align: text-bottom;
+	float: right;
+	clear: left;
+	margin: 0 auto;
+}*/
