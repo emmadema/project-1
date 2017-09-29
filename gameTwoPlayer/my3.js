@@ -44,24 +44,17 @@ $(document).ready(function(){
 
 				} 
 				else { //if there is no match then show the card back and hide the card front
-					playerTurn = "player_2";//set players turn to player two to move on
-					//alert('Player 1 Turn');
-					setTimeout( () => {
+						setTimeout( () => {
+						playerTurn = "player_2";//set players turn to player two to move on	
 						$(this).find('.cardBack').show();//when I remove this the card clicked on secong dissaperes
 						$(this).find('.cardFront').hide();//hide the front of the card
 						classNames[0].hide();//when I remove this the first card dissappersand the second card appers under the card Back
 						classNames[0].parent().find('.cardBack').show();//when I remove this the first card clicked disspears and the second card never flips
-
 						classNames = [];
 
 					}, 250);
 					setTimeout(alert, 500, "No match, Player Two's Turn");
 				}
-				 //when I remove this the first card show and then hide as soon as the second card is clicked withouh showing the second card
-				 //clear the array after two cards are drawn that dont match
-				//clicks=0;	
-				//(alert 1000, 'Player 2 Turn');//al;ert player two that it is their turn
-				//empty the class names array
 			}
 		} 
 		else {//if it is player twos turn execute the below code
@@ -97,7 +90,7 @@ $(document).ready(function(){
 				}
 				else { //if there is no match then show the card back and hide the card front
 					
-				setTimeout( () => {
+					setTimeout( () => {
 						playerTurn = "player_1";
 						$(this).find('.cardBack').show();//when I remove this the card clicked on secong dissaperes
 						$(this).find('.cardFront').hide();//hide the front of the card
