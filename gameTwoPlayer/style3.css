@@ -26,7 +26,7 @@ html, body{/*styling for the body-background image only*/
 
 button{/*styles the rest button*/
 	/*display: inline-block;/*set the display to inline block so it can move next to other elements*/
-	margin: auto;
+	margin: auto;/**/
 	border-radius: 20px;/*round the board 20px*/
 	padding: 30px;/*set the padding for the button to 30px - makes inside bigger*/
 	font-size: 34px; /*sets the font size to 32px*/

@@ -15,7 +15,7 @@ img { /*style for all page images*/
 }
 
 .onePlayer {/*styles the one player button*/
-	margin: 200px 20px 20px 20px;/*set the outer margin*/
+	margin: 50px 20px 20px 20px;/*set the outer margin*/
 	padding: 15px 40px 15px 40px; /*sets the internal padding*/
 	font-size: 30px;/*sets the font size*/
 	border-radius: 40px; /*creates buttons rounded edges*/
@@ -29,7 +29,7 @@ img { /*style for all page images*/
 }
 
 .twoPlayer {/*styles the two player button*/
-	margin: 200px 20px 20px 20px;/*sets the outer margin*/
+	margin: 50px 20px 20px 20px;/*sets the outer margin*/
 	padding: 15px 40px 15px 40px;/*sets the internal padding*/
 	font-size: 30px;/*sets the font size*/
 	border-radius: 40px;/*creates buttons rounded edges*/
@@ -51,4 +51,16 @@ footer {/*creates the footer for the page*/
 	text-align: center; /*centers text*/
 	font-family: arial;/*changes font*/
 	color: white;/*changes the font color*/
+}
+
+.rules{
+	float: left;
+	clear: both;
+	color: #ffff66;
+	text-align: left;
+	font-family: arial;/*sets the font family to bangers*/
+	width: 400px;
+	background-color: rgba(178, 153, 204, .8);
+	padding: 10px;
+	border-radius: 10px;
 }

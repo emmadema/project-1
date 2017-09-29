@@ -26,7 +26,7 @@ $(document).ready(function(){
 					$(".points div").text("");
 					$(".points div").append(points); //show the points next to the point on the game board
 					console.log(points);
-					setTimeout(alert, 500, "You got a match!"); //send alert that you have a match, but dont run it until the card is flipped over
+					//setTimeout(alert, 500, "You got a match!"); //send alert that you have a match, but dont run it until the card is flipped over
 				if (points === 3){//if points are equal to 3
 					setTimeout(alert, 1000, "You Win!"); //player wins the game and an alert is show
 					score++;//one point is added to the score
