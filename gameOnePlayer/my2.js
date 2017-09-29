@@ -25,21 +25,26 @@ $(document).ready(function(){
 				//classNames = []; //clear the array after a match
 				setTimeout(alert, 500, "You got a match!"); //send alert that you have a match, but dont run it until the card is flipped over
 				points++;//add one point each time there is a match
-				$(".points").append(points); //show the points next to the point on the game board
-				//console.log(points);
+				$(".points div").text("");
+				$(".points div").append(points); //show the points next to the point on the game board
+				console.log(points);
 				if (points === 3){//if points are equal to 3
 					setTimeout(alert, 1000, "You Win!"); //player wins the game and an alert is show
 					score++;//one point is added to the score
-					$(".score").append(score); //show the score next to the score on the game board
+					$(".score div").text("");
+					$(".score div").append(score); //show the score next to the score on the game board
 				}
 		} else { //if there is no match then show the card back and hide the card front
-			$(this).find('.cardBack').show();//when I remove this the card clicked on secong dissaperes
-			$(this).find('.cardFront').hide();//hide the card front
-			classNames[0].hide();//hide all the cardFronts with index of 0 in the class names array
-			classNames[0].parent().find('.cardBack').show();//show all the cardBacks with index of 0 in the class names array
-			}
+				//show card clicked on first then flip over both cards
+				
+				$(this).find('.cardBack').show();//when I remove this the card clicked on secong dissaperes
+				$(this).find('.cardFront').hide();//hide the front of the card
+				classNames[0].hide();//hide all the cardFronts with index of 0 in the class names array
+				classNames[0].parent().find('.cardBack').show();//show all the cardBacks with index of 0 in the class names array
+				}
 		classNames = [];//clear the array after two cards are drawn that dont match
 		}
+
 	});
 	//reset button 
 	$('.refresh').click(function(){//when the refresh button is clicked run this function
@@ -51,7 +56,6 @@ $(document).ready(function(){
  	});
 });
 
-	
 
  
 
