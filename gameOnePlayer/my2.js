@@ -3,34 +3,10 @@
 $(document).ready(function(){
 	console.log('query ready');
 
-//What I need to do
-//showing images when clicked - Done
-//on click hide image on front of card and show image on back of card - Done
-//unbind click so each card can only be clicked once - Done
-//add image for front of card same for each - Done
-
-//showing images when clicked
-//on click hide image on front of card and show image on back of card
-//unbind click so each card can only be clicked once
-
-//keep score and store the score for each game - build the score as the player plays more games 
-//when player gets all cards matched annouce a winner
-//use two boards on one screen split with sperate scores then comapre the seprate scores
-
-
-	var points = 0;
-	var score = 0;
-
-	
-
-	var clicks = 0;
+	var points = 0; //tracks how many matched the player has made
+	var score = 0; //tracks how many games the player has won
+	var clicks = 0; //tracks the players clicks to ensure ony two clicks are allowed before the card is flipped
 	var classNames = []; //calls names array feeds in the class names for the click function and then moves them out
-
-	var player1 = player1;
-	var player2 = player2;
-	//function seeCard (){
-		//var flipped = $('')
-	//}
 
 	//flip the cards when a cell is clicked
 	$('.cells').click(function(){ //when a cell is clicked run this function
@@ -48,42 +24,23 @@ $(document).ready(function(){
 				//$(this).unbind('click');//dont allow another click 
 				//classNames = []; //clear the array after a match
 				setTimeout(alert, 500, "You got a match!"); //send alert that you have a match, but dont run it until the card is flipped over
-				points++;
-				$(".points").append(points);
-				console.log(points);
-				if (points === 3){
-					setTimeout(alert, 1000, "You Win!");
-					score++;
-					$(".score").append(score);
+				points++;//add one point each time there is a match
+				$(".points").append(points); //show the points next to the point on the game board
+				//console.log(points);
+				if (points === 3){//if points are equal to 3
+					setTimeout(alert, 1000, "You Win!"); //player wins the game and an alert is show
+					score++;//one point is added to the score
+					$(".score").append(score); //show the score next to the score on the game board
 				}
 		} else { //if there is no match then show the card back and hide the card front
 			$(this).find('.cardBack').show();//when I remove this the card clicked on secong dissaperes
-			$(this).find('.cardFront').hide();
-			classNames[0].hide();//when I remove this the first card dissappersand the second card appers under the card Back
-			classNames[0].parent().find('.cardBack').show();//when I remove this the first card clicked disspears and the second card never flips
-			 //when I remove this the first card show and then hide as soon as the second card is clicked withouh showing the second card
-			 //clear the array after two cards are drawn that dont match
-			//clicks=0;	
+			$(this).find('.cardFront').hide();//hide the card front
+			classNames[0].hide();//hide all the cardFronts with index of 0 in the class names array
+			classNames[0].parent().find('.cardBack').show();//show all the cardBacks with index of 0 in the class names array
 			}
-
-		classNames = [];
-		
+		classNames = [];//clear the array after two cards are drawn that dont match
 		}
-	
 	});
-
-
-			
-		
-	//if number of cards =2 see if thier ids match
-	// if they do match give a point
-	//if two cards are slected even if they dont match flip them back over
-	//if cards match keep them fliped over
-	//the game is over when all cards are matched
-	//assigning cards randomly at the start of the game
-	//give each card a class and write out random sequences
-	//use a function to sort an array of cards randomly into each cell
-
 	//reset button 
 	$('.refresh').click(function(){//when the refresh button is clicked run this function
  		$('.cardFront').hide();//for every card hide the card front with the character
@@ -91,10 +48,7 @@ $(document).ready(function(){
  		classNames=[]; //sets class names back to 0
  		points=0; //sets points back to 0
  		clicks=0; //sets clicks back to 0
-  		//$('.cells').attr('class').bind('click');
-
  	});
- 	
 });
 
 	

@@ -1,5 +1,52 @@
-Rugrats Matching Game
+Emma’s Rugrats Matching Game
 
 Wire Frame Link: https://wireframepro.mockflow.com/view/Deef720e7bf8bc469b5fc335a11ce04f3
 
 Trello Link: https://trello.com/b/6KDFq7pq/project-1-rugrats-matching-game
+
+Game Object:
+One Player: Match all the cards on the board.
+Two Player: Get the most matched in the least amount of turns.
+
+Theme: 
+Rugrats TV Show
+https://en.wikipedia.org/wiki/Rugrats
+
+HTML
+
+The game board are set up in a table.
+The images are added into the table through the html.
+The cardBack image is the Rugrats logo which appears the same on each card.
+The cardFront is a different image of a Rugrats character or icon in pairs of two so each has a match. These images are stacked directly under the cardBack and are hidden until called on a click. 
+The buttons on the landing page have the option for one or two players which both lead to different html, style sheets and JavaScript for each version of the game.
+
+CSS
+
+JavaScript
+
+One Player:
+The one player has two rows of three cards.
+The variables that are tracked are the points, the score (how many games won), clicks (how many time the player has clicked on a card) and classNames which is an empty array where things are added.
+
+On a click the back of the card is hidden and the front of the card is show.
+The card front class names are pushed into the empty classNames array. 
+
+If this is the first click then nothing else is done and the player had to click another card.
+
+If it is the second click the second card class is added to the array and then the card classes are compared to see if they are identical. 
+-If the card classes are identical the player will get an alert that they have a match and one point will be added to their points. 
+-If the card classes are not identical the cards will flip back over and the array classNames will be cleared.
+
+The refers button will reset the point to 0, the clicks to 0, will flip all the cards back to cardBack and will clear the class names array. This allows the player to continue playing without looking their overall score.
+
+Two Players:
+Two player works similar to one player but it alternates between each player instead of only keeping score for one.
+When the game starts it is player ones turn and they will receive and alert. 
+When player one clicks it is first checked to make sure it is player ones turn.
+Then the code is run for either player one or player two. 
+If it is player one the cardBack is hidden and the cardFront is shown. 
+The class name for the card is pushed into the ClassNames array.
+If this is the first click one click is added to the click counter and then the player can click on their next card. 
+If it is the second card clicked the clicks are rest to 0 and the second cards classes are added to the array. Then the two classes are compared. If the classes are equal the player gets a point and the point are appended to the game board. Then it is the next players turn and they get an alert. If the classes are not equal the cardFront is hidden and the cardBack is shown. The the turn goes to the next player. 
+
+*See comments for more detail on all items

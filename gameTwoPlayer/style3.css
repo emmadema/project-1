@@ -3,51 +3,51 @@
 html, body{/*styling for the body-background image only*/
 	/*background image added to the body - the image is the Rugrats lving room with white bottom for charater space*/
 	background-image: url('https://i.pinimg.com/originals/ff/29/85/ff298568e2e096f81772128b40b4009c.png');
-	background-repeat: repeat; /*background image not allowed to repeat*/
+	background-repeat: repeat; /*background image repeats*/
 	height: 100%; /*background height set to 100%*/
-	width: 100%;
+	width: 100%;/*background with set to 100%*/
 	background-size: cover; /*background size to fill the full screen*/
-	margin: 0;
+	margin: 0;/*makes the margin fro the backgrouns image 0*/
 }
 
-.logo{
-	height: 300px;
-	width: 500px;
-	float: left;
+.logo{ /*styling for the logo Rugrats */
+	height: 300px;/*makes the logo 300px tall*/
+	width: 500px; /*makes the logo 300px wide*/
+	float: left; /*floats the logo to the left so it appears in the upper lefthand corner of the screen*/
 }
 
-#gameBoard{
-	margin: auto;
-	border-spacing: 40px;
+#gameBoard{/*styles the overall table*/
+	margin: auto; /*center the table on the page*/
+	border-spacing: 40px; /*makes each table cell 40p away from eachother*/
 }
 
-.cells{
-	height: 200px;
-	width: 200px;
+.cells{/*styles the individual card on the table*/
+	height: 200px;/*each card has a height of 200px*/
+	width: 200px;/*each card had a width of 200px*/
 }
 
-button{
-	display: inline-block;
-	margin-top: 20px;
-	margin-bottom: 20px;
-	margin-left: 600px;
-	margin-right: 20px;
-	border-radius: 20px;
-	padding: 30px;
-	font-size: 32px;
-	background-color: #ffff66;
-	box-shadow: 5px 5px 5px #ffffcc;
-	border: none;
-	font-family: 'Bangers', cursive;
-	color: #9370DB;
-	position: relative;
-	float: left;
-	clear: both;
+button{/*styles the rest button*/
+	display: inline-block;/*set the display to inline block so it can move next to other elements*/
+	margin-top: 20px;/*sets the top margin tp 20px*/
+	margin-bottom: 20px;/*sets the bottom margin to 20px*/
+	margin-left: 600px;/*sets the left margin to 600px trying to move itto the right*/
+	margin-right: 20px;/*sets the right margin to 20px*/
+	border-radius: 20px;/*round the board 20px*/
+	padding: 30px;/*set the padding for the button to 30px - makes inside bigger*/
+	font-size: 32px; /*sets the font size to 32px*/
+	background-color: #ffff66; /*sets the background to yellow*/
+	box-shadow: 5px 5px 5px #ffffcc; /*sets the box shadow to a lighter yellow*/
+	border: none; /*removes the boarder*/
+	font-family: 'Bangers', cursive;/*sets the font to Bangers*/
+	color: #9370DB; /*sets the font color to purple*/
+	position: relative; /*positions it relative to other elemnts on the page*/
+	float: left;/*floats the bottom to the left*/
+	clear: both;/*allows the button to clear any other floats*/
 }
 
-.score{
-	text-align: center;
-	font-family: 'Bangers', cursive;
-	color: #ffff66;
-	font-size: 42px;
+.score{/*styles the point and the score*/
+	text-align: center;/*centers the text*/
+	font-family: 'Bangers', cursive;/*sets the font to bangers*/
+	color: #ffff66;/*sets the font color to yellow*/
+	font-size: 42px;/*sets the font size to 42px*/
 }
