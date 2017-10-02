@@ -7,7 +7,8 @@ $(document).ready(function(){
 	var score = 0; //tracks how many games the player has won
 	var clicks = 0; //tracks the players clicks to ensure ony two clicks are allowed before the card is flipped
 	var classNames = []; //calls names array feeds in the class names for the click function and then moves them out
-	
+
+			
 	$('.cells').click(function(){ //when a cell is clicked run this function
 		$(this).find('.cardFront').show();//find only the card front of the element that is clicked 
 		$(this).find('.cardBack').hide();//find only the card back of the elemnt that is clicked and hide it		
@@ -46,6 +47,8 @@ $(document).ready(function(){
 			}	
 		}
 	});
+
+
 	//reset button 
 	$('.refresh').click(function(){//when the refresh button is clicked run this function
  		$('.cardFront').hide();//for every card hide the card front with the character
@@ -55,6 +58,16 @@ $(document).ready(function(){
 		$(".points div").append(points);
  		classNames=[]; //sets class names back to 0
  		clicks=0; //sets clicks back to 0
+ 		var cards = [];
+		cards.push($('#topLeft'));
+		cards.push($('#topMiddle'));
+		cards.push($('#topRight'));
+		cards.push($('#bottomLeft'));
+		cards.push($('#bottomMiddle'));
+		cards.push($('#bottomRight'));
+	 	Math.floor(Math.random() * cards.length);
+
+	 	console.log(cards);
  	});
 });
 
