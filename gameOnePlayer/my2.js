@@ -65,7 +65,8 @@ $(document).ready(function(){
 		cards.push($('#bottomLeft'));
 		cards.push($('#bottomMiddle'));
 		cards.push($('#bottomRight'));
-	 	Math.floor(Math.random() * cards.length);
+		for (var i = cards.length-1; i >=0; i--);
+	 	Math.floor(Math.random() * (i+1));
 
 	 	console.log(cards);
  	});
