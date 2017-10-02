@@ -1,66 +1,149 @@
-body { /*styling for the body-background image only*/
-	/*background image added to the body - the image is the Rugrats lving room with white bottom for charater space*/
-	background-image: url('https://i.pinimg.com/736x/c7/7f/83/c77f8372936519fa81e281cbd76931d5--rugrats-s-nostalgia.jpg');
-	background-repeat: no-repeat; /*background image not allowed to repeat*/
-	height: 100%; /*background height set to 100%*/
-	width: 100%;/*background width set to 100%*/
-	background-size: cover; /*background size to fill the full screen*/
+/*----------------ipad------------------*/
+@media (min-device-width: 768px) and (max-device-width: 1025px) {
+	/*at this size the background image chnages to one that fits the screen
+		the buttons float under the paragrph to make photo more visible
+		the logo strinks 
+		the rules front gets larger
+		the footer color changes to purple*/
+
+	.background { /*styling for the body-background image only*/
+		/*background image added to the body - the image is the Rugrats lving room with white bottom for charater space*/
+		background-image: url('http://images2.fanpop.com/images/photos/8300000/90s-cartoons-the-90s-8368210-300-373.jpg');
+		background-repeat: no-repeat; /*background image not allowed to repeat*/
+		height: 1024px; /*background height set to 100%*/
+		width: 500px;/*background width set to 100%*/
+		background-size: cover; /*background size to fill the full screen*/
+	}
+
+	img { /*style for all page images*/
+		height: 300px; /*sets image height to 300px*/
+		width: 400px; /*sets image width to 400px*/
+		margin: auto; /*centers element within container*/
+		float: left;/*moves image to the left*/
+	}
+	
+
+	.onePlayer {/*styles the one player button*/
+		margin: 50px 20px 20px 20px;/*set the outer margin*/
+		padding: 15px 40px 15px 40px; /*sets the internal padding*/
+		font-size: 30px;/*sets the font size*/
+		border-radius: 40px; /*creates buttons rounded edges*/
+		background-color: #ffff66;/*sets background color to yellow*/
+		box-shadow: 5px 5px 5px #ffffcc; /*sets box shadow to lighter yellow and defines the size of the shadow*/
+		border: none; /*removes boarder*/
+		font-family: 'Bangers', cursive;/*sets the font family to bangers*/
+		color: #9370DB;/*sets the font color to purple*/
+		float: right;/*fmoves button to the left*/
+		position: relative; /*sets the postion relative to its normal postion*/
+	}
+
+	.twoPlayer {/*styles the two player button*/
+		margin: 50px 20px 20px 20px;/*sets the outer margin*/
+		padding: 15px 40px 15px 40px;/*sets the internal padding*/
+		font-size: 30px;/*sets the font size*/
+		border-radius: 40px;/*creates buttons rounded edges*/
+		background-color: #ffff66;/*sets background color to yellow*/
+		box-shadow: 5px 5px 5px #ffffcc;/*sets box shadow to lighter yellow and defines the size of the shadow*/
+		border: none;/*removes boarder*/
+		font-family: 'Bangers', cursive;/*sets the font family to bangers*/
+		color: #9370DB;/*sets the font color to purple*/
+		float: right;/*moves button to the right*/
+		position: relative;/*sets the postion relative to its normal postion*/
+	}
+
+	footer {/*creates the footer for the page*/
+		position: absolute; /*moves when page is scrolled*/
+		right: 0; /*moves poation to bottom*/
+		bottom: 0;/*moves poation to bottom*/
+		left: 0;/*moves poation to bottom*/
+		padding: 10px;/*inner padding set to 10px*/
+		text-align: center; /*centers text*/
+		font-family: arial;/*changes font*/
+		color: #9370DB;/*changes the font color*/
+	}
+
+	.rules{
+		float: left;/*moves the rules to the left*/
+		clear: both; /*clears all other floats*/ 
+		color: #f0f8ff; /*chnages the font color to light grey*/
+		text-align: left; /*moves the text to the left*/
+		font-family: arial;/*sets the font family to bangers*/
+		width: 400px; /*makes the width 400px*/
+		background-color: rgba(178, 153, 204, .8); /*chnages the background color to purple with an opacity*/
+		padding: 10px;/*changes the internal padding to 10px*/
+		border-radius: 10px;/*round the b orders*/ 
+		font-size: 24px;/*makes the font size 18 px*/
+	}
 }
 
-img { /*style for all page images*/
-	height: 300px; /*sets image height to 300px*/
-	width: 600px; /*sets image width to 600px*/
-	margin: auto; /*centers element within container*/
-	float: left;/*moves image to the left*/
-}
+/*------------------Desktop----------------------*/
 
-.onePlayer {/*styles the one player button*/
-	margin: 50px 20px 20px 20px;/*set the outer margin*/
-	padding: 15px 40px 15px 40px; /*sets the internal padding*/
-	font-size: 30px;/*sets the font size*/
-	border-radius: 40px; /*creates buttons rounded edges*/
-	background-color: #ffff66;/*sets background color to yellow*/
-	box-shadow: 5px 5px 5px #ffffcc; /*sets box shadow to lighter yellow and defines the size of the shadow*/
-	border: none; /*removes boarder*/
-	font-family: 'Bangers', cursive;/*sets the font family to bangers*/
-	color: #9370DB;/*sets the font color to purple*/
-	float: left;/*fmoves button to the left*/
-	position: relative; /*sets the postion relative to its normal postion*/
-}
+@media (min-device-width: 1026px) {
 
-.twoPlayer {/*styles the two player button*/
-	margin: 50px 20px 20px 20px;/*sets the outer margin*/
-	padding: 15px 40px 15px 40px;/*sets the internal padding*/
-	font-size: 30px;/*sets the font size*/
-	border-radius: 40px;/*creates buttons rounded edges*/
-	background-color: #ffff66;/*sets background color to yellow*/
-	box-shadow: 5px 5px 5px #ffffcc;/*sets box shadow to lighter yellow and defines the size of the shadow*/
-	border: none;/*removes boarder*/
-	font-family: 'Bangers', cursive;/*sets the font family to bangers*/
-	color: #9370DB;/*sets the font color to purple*/
-	float: left;/*moves button to the right*/
-	position: relative;/*sets the postion relative to its normal postion*/
-}
+	body { /*styling for the body-background image only*/
+		/*background image added to the body - the image is the Rugrats lving room with white bottom for charater space*/
+		background-image: url('https://i.pinimg.com/736x/c7/7f/83/c77f8372936519fa81e281cbd76931d5--rugrats-s-nostalgia.jpg');
+		background-repeat: no-repeat; /*background image not allowed to repeat*/
+		height: 100%; /*background height set to 100%*/
+		width: 100%;/*background width set to 100%*/
+		background-size: cover; /*background size to fill the full screen*/
+	}
 
-footer {/*creates the footer for the page*/
-	position: absolute; /*moves when page is scrolled*/
-	right: 0; /*moves poation to bottom*/
-	bottom: 0;/*moves poation to bottom*/
-	left: 0;/*moves poation to bottom*/
-	padding: 10px;/*inner padding set to 10px*/
-	text-align: center; /*centers text*/
-	font-family: arial;/*changes font*/
-	color: white;/*changes the font color*/
-}
+	img { /*style for all page images*/
+		height: 300px; /*sets image height to 300px*/
+		width: 600px; /*sets image width to 600px*/
+		margin: auto; /*centers element within container*/
+		float: left;/*moves image to the left*/
+	}
+	.onePlayer {/*styles the one player button*/
+		margin: 50px 20px 20px 20px;/*set the outer margin*/
+		padding: 15px 40px 15px 40px; /*sets the internal padding*/
+		font-size: 30px;/*sets the font size*/
+		border-radius: 40px; /*creates buttons rounded edges*/
+		background-color: #ffff66;/*sets background color to yellow*/
+		box-shadow: 5px 5px 5px #ffffcc; /*sets box shadow to lighter yellow and defines the size of the shadow*/
+		border: none; /*removes boarder*/
+		font-family: 'Bangers', cursive;/*sets the font family to bangers*/
+		color: #9370DB;/*sets the font color to purple*/
+		float: left;/*fmoves button to the left*/
+		position: relative; /*sets the postion relative to its normal postion*/
+	}
 
-.rules{
-	float: left;
-	clear: both;
-	color: #ffff66;
-	text-align: left;
-	font-family: arial;/*sets the font family to bangers*/
-	width: 400px;
-	background-color: rgba(178, 153, 204, .8);
-	padding: 10px;
-	border-radius: 10px;
+	.twoPlayer {/*styles the two player button*/
+		margin: 50px 20px 20px 20px;/*sets the outer margin*/
+		padding: 15px 40px 15px 40px;/*sets the internal padding*/
+		font-size: 30px;/*sets the font size*/
+		border-radius: 40px;/*creates buttons rounded edges*/
+		background-color: #ffff66;/*sets background color to yellow*/
+		box-shadow: 5px 5px 5px #ffffcc;/*sets box shadow to lighter yellow and defines the size of the shadow*/
+		border: none;/*removes boarder*/
+		font-family: 'Bangers', cursive;/*sets the font family to bangers*/
+		color: #9370DB;/*sets the font color to purple*/
+		float: left;/*moves button to the right*/
+		position: relative;/*sets the postion relative to its normal postion*/
+	}
+
+	footer {/*creates the footer for the page*/
+		position: absolute; /*moves when page is scrolled*/
+		right: 0; /*moves poation to bottom*/
+		bottom: 0;/*moves poation to bottom*/
+		left: 0;/*moves poation to bottom*/
+		padding: 10px;/*inner padding set to 10px*/
+		text-align: center; /*centers text*/
+		font-family: arial;/*changes font*/
+		color: white;/*changes the font color*/
+	}
+
+	.rules{
+		float: left;/*moves the rules to the left*/
+		clear: both; /*clears all other floats*/ 
+		color: #f0f8ff; /*chnages the font color to light grey*/
+		text-align: left; /*moves the text to the left*/
+		font-family: arial;/*sets the font family to bangers*/
+		width: 400px; /*makes the width 400px*/
+		background-color: rgba(178, 153, 204, .8); /*chnages the background color to purple with an opacity*/
+		padding: 10px;/*changes the internal padding to 10px*/
+		border-radius: 10px;/*round the b orders*/ 
+		font-size: 24px;/*makes the font size 18 px*/
+	}
 }
